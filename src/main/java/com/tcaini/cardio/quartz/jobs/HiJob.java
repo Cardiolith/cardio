@@ -12,6 +12,6 @@ public class HiJob extends QuartzJobBean {
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
+        System.out.println("jobExecutionContext.getFireTime="+jobExecutionContext.getFireTime());
     }
 }
