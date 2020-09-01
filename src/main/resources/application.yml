@@ -1,0 +1,104 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /demo
+spring:
+  profiles:
+    active: dev
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+  datasource:
+    url: jdbc:mysql://localhost:3306/cardio?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+    username: root
+    password: tcaini1024
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    # druid
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    # druid
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDateSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.showSqlMillis=500
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /cardio
+    username: cardio
+    password: tcaini1024
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/admin
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      retries: 0
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      enable-auto-commit: false
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: test
+    listener:
+      log-container-config: false
+      concurrency: 5
+      ack-mode: manual_immediate
+  ## spring-boot actuator����
+#management:
+#  server:
+#    servlet:
+#      context-path: /sys
+#    port: 8889
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+  quartz:
+    job-store-type: jdbc
+    wait-for-jobs-to-complete-on-shutdown: true
+    scheduler-name: SpringBootDemoScheduler
+    properties:
+      org.quartz.threadPool.threadCount: 5
+      org.quartz.threadPool.threadPriority: 5
+      org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread: true
+      org.quartz.jobStore.misfireThreshold: 5000
+      org.quartz.jobStore.class: org.quartz.impl.jdbcjobStore.JobStoreTX
+logging:
+  level:
+    com.tcaini: debug

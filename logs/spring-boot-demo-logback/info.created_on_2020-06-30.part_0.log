@@ -1,0 +1,33 @@
+2020-06-30 18:33:49,972 [main] INFO  [com.tcaini.cardio.CardioApplication] StartupInfoLogger.java:55 - Starting CardioApplication on LAPTOP-Q31GNE6R with PID 16712 (D:\data\IdeaProjects\cardio\target\classes started by 16541 in D:\data\IdeaProjects\cardio)
+2020-06-30 18:33:49,974 [main] INFO  [com.tcaini.cardio.CardioApplication] SpringApplication.java:655 - The following profiles are active: dev
+2020-06-30 18:33:51,147 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-30 18:33:51,148 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-30 18:33:51,218 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:187 - Finished Spring Data repository scanning in 62ms. Found 2 JPA repository interfaces.
+2020-06-30 18:33:51,232 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-30 18:33:51,233 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-30 18:33:51,250 [main] INFO  [o.s.d.r.c.RepositoryConfigurationExtensionSupport] RepositoryConfigurationExtensionSupport.java:348 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tcaini.cardio.jpa.repository.DepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-06-30 18:33:51,251 [main] INFO  [o.s.d.r.c.RepositoryConfigurationExtensionSupport] RepositoryConfigurationExtensionSupport.java:348 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tcaini.cardio.jpa.repository.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-06-30 18:33:51,251 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:187 - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-30 18:33:51,794 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8888 (http)
+2020-06-30 18:33:51,802 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-06-30 18:33:51,802 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-30 18:33:52,390 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-06-30 18:33:52,391 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2375 ms
+2020-06-30 18:33:52,954 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-30 18:33:53,029 [task-1] INFO  [org.hibernate.jpa.internal.util.LogHelper] LogHelper.java:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-30 18:33:53,177 [task-1] INFO  [org.hibernate.Version] Version.java:44 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-30 18:33:53,412 [task-1] INFO  [org.hibernate.annotations.common.Version] JavaReflectionManager.java:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-30 18:33:53,747 [task-1] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2020-06-30 18:33:53,769 [task-1] INFO  [org.hibernate.dialect.Dialect] Dialect.java:172 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-06-30 18:33:55,164 [task-1] INFO  [o.h.e.t.jta.platform.internal.JtaPlatformInitiator] JtaPlatformInitiator.java:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-30 18:33:55,171 [task-1] INFO  [o.s.orm.jpa.LocalContainerEntityManagerFactoryBean] AbstractEntityManagerFactoryBean.java:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-30 18:33:55,474 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-30 18:33:55,521 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8888 (http) with context path '/demo'
+2020-06-30 18:33:55,522 [main] INFO  [o.s.d.r.c.DeferredRepositoryInitializationListener] DeferredRepositoryInitializationListener.java:49 - Triggering deferred initialization of Spring Data repositories…
+2020-06-30 18:33:55,733 [main] INFO  [o.s.d.r.c.DeferredRepositoryInitializationListener] DeferredRepositoryInitializationListener.java:53 - Spring Data repositories initialized!
+2020-06-30 18:33:55,743 [main] INFO  [com.tcaini.cardio.CardioApplication] StartupInfoLogger.java:61 - Started CardioApplication in 6.236 seconds (JVM running for 7.235)
+2020-06-30 18:33:55,747 [main] INFO  [com.tcaini.cardio.CardioApplication] CardioApplication.java:22 - Spring Boot初始化了370个bean
+2020-06-30 18:33:55,747 [main] WARN  [com.tcaini.cardio.CardioApplication] CardioApplication.java:23 - Spring Boot初始化了370个bean
+2020-06-30 18:33:56,351 [RMI TCP Connection(3)-192.168.1.7] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-30 18:33:56,351 [RMI TCP Connection(3)-192.168.1.7] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2020-06-30 18:33:56,357 [RMI TCP Connection(3)-192.168.1.7] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 6 ms
