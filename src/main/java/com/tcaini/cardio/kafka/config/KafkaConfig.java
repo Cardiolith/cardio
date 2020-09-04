@@ -11,6 +11,8 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
 import org.springframework.kafka.listener.ContainerProperties;
 
+import java.util.Properties;
+
 @Configuration
 @EnableKafka
 @EnableConfigurationProperties({KafkaProperties.class})
@@ -26,7 +28,7 @@ public class KafkaConfig {
 
     @Bean
     public ProducerFactory<String, String> producerFactory(){
-        return new DefaultKafkaProducerFactory<>(kafkaProperties.buildAdminProperties());
+        return new DefaultKafkaProducerFactory<>(kafkaProperties.buildProducerProperties());
     }
 
     @Bean
